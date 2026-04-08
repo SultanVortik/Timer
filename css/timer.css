@@ -1,0 +1,159 @@
+@font-face {
+    font-family: "main-font";
+    src: url('/src/fonts/RobotoMono-Regular.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: "second-font";
+    src: url('/src/fonts/Jost-Light.ttf') format(truetype);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #172c4b;
+    --text-color-light: white;
+    --text-size-main: 4rem;
+    --text-size-second: 2rem;
+    --box-shadow-dark: 0px 10px 10px -5px black;
+    --box-shadow-light: 1px 1px 20px 10px white;
+    --backgroung-color-dark: #172c4b;
+}
+
+.header {
+    background-color: #172c4b;
+    color: var(--text-color-light);
+    font-size: var(--text-size-main);
+    font-family: "main-font";
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow-dark);
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.header span {
+    transition: 0.5s;
+}
+.header span:hover {
+    font-size: 4.5rem;
+    transition: 0.5s;
+}
+
+
+.header_buttons {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.header_buttons a {
+    width: 100%;
+    margin-right: 2rem;
+}
+
+.header_buttons a img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.header_buttons img:hover {
+    width: 5rem;
+    transition: 0.5s;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+    box-shadow: var(--box-shadow-dark);
+    padding: 10px;
+}
+
+.main_timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 700px;
+    background-color: var(--backgroung-color-dark);
+    border: 10px solid #4ede0b;
+    box-shadow: 0 0 20px 5px black;
+    border-radius: 50%;
+    font-size: 6rem;
+    font-family: "main-font";
+    font-weight: bold;
+    color: var(--text-color-light);
+}
+
+.main_timer-start {
+    animation: lighthing 2s infinite ;
+}
+
+
+.main_timer-buttons {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    font-family: "second-font";
+}
+
+.main_button {
+    width: 30%;
+    font-size: 3rem;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    transition: 0.5s;
+    border: none;
+    font-family: "main-font";
+    color: var(--text-color-light);
+}
+
+.main_button:active {
+    opacity: 0.3;
+}
+
+.main_button-icon {
+    width: 50px;
+}
+
+.start {
+    background-color: #4aca2d;
+    box-shadow: 0 0 5px 2px #4aca2d;
+}
+
+.pause {
+    background-color: #2478db;
+    box-shadow: 0 0 5px 2px #2478db;
+}
+
+.reset {
+    background-color: #d52124;
+    box-shadow: 0 0 5px 2px #d52124;
+}
+
+@keyframes lighthing {
+    0% {
+        box-shadow: 0;
+    }
+    
+    50% {
+        box-shadow: 0 0 10px 2px #4ede0b;
+    }
+
+    100% {
+        box-shadow: 0;
+    }
+}
+
