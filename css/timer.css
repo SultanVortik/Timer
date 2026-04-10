@@ -12,12 +12,17 @@ body {
     margin: 0;
     padding: 0;
     background-color: #172c4b;
+
     --text-color-light: white;
     --text-size-main: 4rem;
     --text-size-second: 2rem;
     --box-shadow-dark: 0px 10px 10px -5px black;
     --box-shadow-light: 1px 1px 20px 10px white;
     --backgroung-color-dark: #172c4b;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 .header {
@@ -40,6 +45,7 @@ body {
 .header span:hover {
     font-size: 4.5rem;
     transition: 0.5s;
+    margin: -1rem;
 }
 
 
@@ -64,6 +70,7 @@ body {
 .header_buttons img:hover {
     width: 5rem;
     transition: 0.5s;
+    margin: -1rem;
 }
 
 .main {
@@ -92,7 +99,7 @@ body {
     color: var(--text-color-light);
 }
 
-.main_timer-start {
+.timer-start {
     animation: lighthing 2s infinite ;
 }
 
@@ -104,6 +111,7 @@ body {
     justify-content: space-around;
     margin-top: 50px;
     font-family: "second-font";
+    padding-bottom: 30px;
 }
 
 .main_button {
@@ -142,6 +150,36 @@ body {
     background-color: #d52124;
     box-shadow: 0 0 5px 2px #d52124;
 }
+
+.footer {
+    margin-top: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_info a {
+    transition: 0.5s;
+}
+
+.footer_info a:hover {
+    font-size: 2rem;
+    transition: 0.5s;
+    margin: 0;
+}
+
+.footer_info, .footer_info a{
+    color: var(--text-color-light);
+    font-family: "second-font";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
 
 @keyframes lighthing {
     0% {
