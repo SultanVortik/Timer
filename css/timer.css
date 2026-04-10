@@ -122,7 +122,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-self: center;
     justify-content: center;
-    transition: 0.5s;
+    transition: 0.1s;
     border: none;
     font-family: "main-font";
     color: var(--text-color-light);
@@ -130,6 +130,7 @@ body::-webkit-scrollbar {
 
 .main_button:active {
     opacity: 0.3;
+    transition: 0.1s;
 }
 
 .main_button-icon {
