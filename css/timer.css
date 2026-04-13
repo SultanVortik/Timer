@@ -126,6 +126,7 @@ body::-webkit-scrollbar {
     border: none;
     font-family: "main-font";
     color: var(--text-color-light);
+    cursor: pointer;
 }
 
 .main_button:active {
