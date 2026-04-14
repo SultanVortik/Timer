@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
     <link rel="stylesheet" href="css/timer.css">
-    <link rel="stylesheet" href="css/set-time.css">
-    <title>Set Time</title>
 </head>
 <body>
     <header class="header">
-        <a href="set-time.html">Timer</a>
+        <a href="index.html">Timer</a>
         <div class="header_buttons" >
             <a href="">
                 <img src="src/img/pomodoro-technique.png" alt="" title="Помодоро таймер">
@@ -23,14 +22,22 @@
         </div>
     </header>
     <main class="main">
-        <div class="main_input-time-container">   
-            <input type="number" placeholder="Часы" class="main_input">
-            <input type="number" placeholder="Минуты" class="main_input">
-            <input type="number" placeholder="Секунды" class="main_input">
+        <div class="main_timer">
+            <span>25:00</span>
         </div>
-        <div class="main_set-time-buttons">
-            <button class="main_button margin-right set-timer">Set Timer</button>
-            <button class="main_button cancel">Cancel</button>
+        <div class="main_timer-buttons">
+            <button class="main_button start">
+                <img class="main_button-icon" src="src/img/play.png" alt="">
+                Start
+            </button>
+            <button class="main_button pause">
+                <img class="main_button-icon" src="src/img/pause-button.png" alt="">
+                Pause
+            </button>
+            <button class="main_button reset">
+                <img class="main_button-icon" src="src/img/reset.png" alt="">
+                Reset
+            </button>
         </div>
     </main>
     <footer class="footer">
