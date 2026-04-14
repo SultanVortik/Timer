@@ -12,13 +12,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #172c4b;
-
     --text-color-light: white;
     --text-size-main: 4rem;
     --text-size-second: 2rem;
     --box-shadow-dark: 0px 10px 10px -5px black;
     --box-shadow-light: 1px 1px 20px 10px white;
-    --backgroung-color-dark: #172c4b;
 }
 
 body::-webkit-scrollbar {
@@ -39,10 +37,12 @@ body::-webkit-scrollbar {
     margin-bottom: 50px;
 }
 
-.header span {
+.header a {
     transition: 0.5s;
+    text-decoration: none;
+    color: var(--text-color-light);
 }
-.header span:hover {
+.header a:hover {
     font-size: 4.5rem;
     transition: 0.5s;
     margin: -1rem;
@@ -143,12 +143,12 @@ body::-webkit-scrollbar {
     box-shadow: 0 0 5px 2px #4aca2d;
 }
 
-.pause {
+.pause, .set-timer {
     background-color: #2478db;
     box-shadow: 0 0 5px 2px #2478db;
 }
 
-.reset {
+.reset, .cancel {
     background-color: #d52124;
     box-shadow: 0 0 5px 2px #d52124;
 }
