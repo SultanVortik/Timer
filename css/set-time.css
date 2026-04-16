@@ -60,3 +60,13 @@
 .margin-right {
     margin-right: 5%
 }
+
+.main_title {
+    background-image: url('../src/img/pomodoro-texture.jpg');
+    background-size: cover;
+    font-family: "main-font";
+    font-size: var(--text-size-main);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+}

@@ -37,12 +37,12 @@ body::-webkit-scrollbar {
     margin-bottom: 50px;
 }
 
-.header a {
+.header_title {
     transition: 0.5s;
     text-decoration: none;
     color: var(--text-color-light);
 }
-.header a:hover {
+.header_title:hover {
     font-size: 4.5rem;
     transition: 0.5s;
     margin: -1rem;
