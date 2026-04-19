@@ -24,12 +24,12 @@
     </header>
     <main class="main">
         <div class="main_input-time-container">   
-            <input type="number" placeholder="Часы" class="main_input">
-            <input type="number" placeholder="Минуты" class="main_input">
-            <input type="number" placeholder="Секунды" class="main_input">
+            <input type="number" id="hours" required max="" placeholder="Часы" class="main_input">
+            <input type="number" id="minutes" required max="60" placeholder="Минуты" class="main_input">
+            <input type="number" id="seconds" required max="60" placeholder="Секунды" class="main_input">
         </div>
         <div class="main_set-time-buttons">
-            <button class="main_button margin-right set-timer">Set Timer</button>
+            <button class="main_button margin-right set-timer" id="set-timer-btn">Set Timer</button>
             <button class="main_button cancel">Cancel</button>
         </div>
     </main>
@@ -39,5 +39,6 @@
             <span>By Magomedov Sultan</span>
         </div>
     </footer>
+    <script src="js/set_time.js"></script>
 </body>
 </html>
