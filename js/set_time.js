@@ -10,6 +10,8 @@ const cancelBtn = document.querySelector(".cancel")
 function setTimerValues() {
     if (inputHours.value < 0 || inputMinutes.value < 0 || inputSeconds.value < 0) {
         window.alert("значение не должно равняться 0 или меньше")
+    } else if (inputHours.value == 0 && inputMinutes.value == 0 && inputSeconds.value == 0){
+        window.alert("значение не должно равняться 0 или меньше")
     } else if (inputHours.value < 0 ) {
         window.alert("некоректные часы")
     } else if (inputMinutes.value > 60) {
@@ -25,6 +27,7 @@ function setTimerValues() {
         console.log(timerValues)
 
         localStorage.setItem("timerValues", timerValues)
+        window.location.href = "timer.html"
     }  
 } 
 
