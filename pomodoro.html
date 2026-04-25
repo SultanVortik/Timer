@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/timer.css">
-    <link rel="stylesheet" href="css/set-time.css">
     <title>Timer</title>
+    <link rel="stylesheet" href="css/timer.css">
 </head>
 <body>
     <header class="header">
@@ -23,10 +22,23 @@
         </div>
     </header>
     <main class="main">
-        <h1 class="main_title">Pomodoro Timer</h1>
-        <div class="main_input-time-container grid">   
-            <button class="main_pomodoro-button btn-1">30/5</button>
-            <button class="main_pomodoro-button btn-2">60/10</button>
+        <div class="main_timer display-center">
+            <span id="current-time">00:00</span>
+            <span class="timer-title">Work Time</span>
+        </div>
+        <div class="main_timer-buttons">
+            <button class="main_button start">
+                <img class="main_button-icon" src="src/img/play.png" alt="">
+                Start
+            </button>
+            <button class="main_button pause">
+                <img class="main_button-icon" src="src/img/pause-button.png" alt="">
+                Pause
+            </button>
+            <button class="main_button reset">
+                <img class="main_button-icon" src="src/img/reset.png" alt="">
+                Reset
+            </button>
         </div>
     </main>
     <footer class="footer">
@@ -35,6 +47,6 @@
             <span>By Magomedov Sultan</span>
         </div>
     </footer>
-    <script src="js/pomodoro_set_time.js"></script>
+    <script src="js/pomodoro.js"></script>
 </body>
 </html>

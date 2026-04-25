@@ -1,0 +1,5 @@
+const pomodoroValuesWork = localStorage.getItem("pomodoroValuesWork")
+const pomodoroValuesBreak = localStorage.getItem("pomodoroValuesBreak")
+const resetPomodoroValuesBreak = localStorage.getItem("resetPomodoroValuesBreak")
+const resetPomodoroValuesWork = localStorage.getItem("resetPomodoroValuesWork")
+console.log(resetPomodoroValuesWork) 

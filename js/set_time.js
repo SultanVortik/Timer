@@ -27,6 +27,7 @@ function setTimerValues() {
         console.log(timerValues)
 
         localStorage.setItem("timerValues", `[${timerValues}]`)
+        localStorage.setItem("resetValues", `[${timerValues}]`)
         window.location.href = "timer.html"
     }  
 } 

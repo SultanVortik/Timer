@@ -99,6 +99,15 @@ body::-webkit-scrollbar {
     color: var(--text-color-light);
 }
 
+.display-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
 .timer-start {
     animation: lighthing 2s infinite ;
 }

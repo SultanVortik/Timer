@@ -1,6 +1,10 @@
 const timerValues = JSON.parse(localStorage.getItem("timerValues")) || [0, 0, 0];
+const resetValues = JSON.parse(localStorage.getItem("resetValues")) || [0, 0, 0];
 const currentTime = document.querySelector("#current-time");
-const timerBlock = document.querySelector(".main_timer")
+const timerBlock = document.querySelector(".main_timer");
+const btnStart = document.querySelector(".start");
+const btnPause = document.querySelector(".pause");
+const btnReset = document.querySelector(".reset");
 currentTime.innerHTML = `${timerValues[0]}:${timerValues[1]}:${timerValues[2]}`
 const music = new Audio('../src/music/1.mp3');
 const checking = () => {
@@ -9,16 +13,6 @@ const checking = () => {
     }
 }
 
-
-// function timerCalculations() {
-//     if (seconds > 0 ) {
-//         seconds -= 1
-//     } else if (seconds === 0) {
-//         seconds == 60
-//     }  
-
-// }
-// Тестовая версия
 function hoursCalculation() {
      if (timerValues[0] > 0) {
         timerValues[0] -= 1
@@ -46,26 +40,68 @@ function secondsCalculation() {
         timerValues[2] -= 1
         currentTime.innerHTML = `${timerValues[0]}:${timerValues[1]}:${timerValues[2]}`
         timerBlock.classList.add('timer-start') 
-    } else if(timerValues[2] === 0 && timerValues[1] > 0) {
+    } else if (timerValues[2] === 0 && timerValues[1] > 0) {
         minutesCalculation()
     } else if (timerValues[0] === 0 && timerValues[1] === 0 && timerValues[2] === 0 ) {
-        music.play()
+        const musicInt = setInterval(() => {
+            music.play()
+        }, 3000);
         clearInterval(secondsInt)
         timerBlock.classList.remove('timer-start')
+        btnPause.addEventListener("click", () => {
+            clearInterval(musicInt)
+            btnPause.removeEventListener("click", clearInterval(musicInt))
+        })
     } else {
         clearInterval(secondsInt)
     }
 }
 
-// const hoursInt = setInterval(() => {
-//     hoursCalculation()
-// }, 3600000)
-// const minutesInt = setInterval(() => {
-//     minutesCalculation()
-// }, 60000)
-const secondsInt = setInterval(() => {
-    secondsCalculation()
-}, 1000)
+let secondsInt;
+console.log(secondsInt)
+
+function playTimer() {
+    if (secondsInt === undefined) {
+        const timerValues = JSON.parse(localStorage.getItem("timerValues")) 
+        secondsInt = setInterval(() => {
+            secondsCalculation()
+        }, 1000)
+        console.log(secondsInt)
+    } else {
+        console.log(secondsInt)
+        return
+    }
+}
+
+function stopTimer() {
+    const stopValue = [
+        timerValues[0],
+        timerValues[1], 
+        timerValues[2]
+    ]
+    clearInterval(secondsInt)
+    secondsInt = undefined
+    console.log(secondsInt)
+    timerBlock.classList.remove('timer-start')
+    localStorage.setItem("timerValues", `[${stopValue}]`)
+    currentTime.innerHTML = `${timerValues[0]}:${timerValues[1]}:${timerValues[2]}`
+}
+
+function resetTimer() {
+    localStorage.setItem("timerValues", `[${resetValues}]`)
+    currentTime.innerHTML = `${timerValues[0]}:${timerValues[1]}:${timerValues[2]}`
+    window.location.reload()
+    console.log(resetValues)
+    playTimer()
+}
+
+
+
+btnStart.addEventListener("click", playTimer)
+btnPause.addEventListener("click", stopTimer)
+btnReset.addEventListener("click", resetTimer)
+playTimer()
+
 
 
 
