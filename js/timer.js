@@ -14,9 +14,9 @@ const checking = () => {
 }
 
 function hoursCalculation() {
-     if (timerValues[0] > 0) {
+     if (timerValues[0] > 0 && timerValues[1] === 0, timerValues[2] === 0) {
         timerValues[0] -= 1
-        timerValues[2] = 59
+        timerValues[1] = 60  
         currentTime.innerHTML = `${timerValues[0]}:${timerValues[1]}:${timerValues[2]}` 
     } else {
         clearInterval(secondsInt)
@@ -28,7 +28,7 @@ function minutesCalculation() {
         timerValues[1] -= 1
         timerValues[2] = 59
         currentTime.innerHTML = `${timerValues[0]}:${timerValues[1]}:${timerValues[2]}` 
-    } else if(timerValues[1] === 0 && timerValues[0] > 0) {
+    } else if(timerValues[1] === 0 && timerValues[0] > 0 ) {
         hoursCalculation()
     } else {
         clearInterval(secondsInt)
@@ -40,8 +40,11 @@ function secondsCalculation() {
         timerValues[2] -= 1
         currentTime.innerHTML = `${timerValues[0]}:${timerValues[1]}:${timerValues[2]}`
         timerBlock.classList.add('timer-start') 
+        console.log(timerValues)
     } else if (timerValues[2] === 0 && timerValues[1] > 0) {
         minutesCalculation()
+    } else if (timerValues[0] > 0 && timerValues[1] === 0 && timerValues[2] === 0) {
+        hoursCalculation()
     } else if (timerValues[0] === 0 && timerValues[1] === 0 && timerValues[2] === 0 ) {
         const musicInt = setInterval(() => {
             music.play()
@@ -101,6 +104,7 @@ btnStart.addEventListener("click", playTimer)
 btnPause.addEventListener("click", stopTimer)
 btnReset.addEventListener("click", resetTimer)
 playTimer()
+
 
 
 
