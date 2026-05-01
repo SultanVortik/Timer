@@ -20,10 +20,22 @@
         </div>
     </header>
     <main class="main">
-        <h1 class="main_title">Pomodoro Timer</h1>
-        <div class="main_input-time-container grid">   
-            <button class="main_pomodoro-button btn-1">30/5</button>
-            <button class="main_pomodoro-button btn-2">60/10</button>
+        <h1 class="settings-title">Settings</h1>
+        <div class="main_settings">
+            <label for="" class="settings_el">
+                Тема: 
+                Светлая<input type="radio" name="theme" id="light"> 
+                Тёмная<input type="radio" name="theme" id="dark">
+            </label><br>
+            <label for="" class="settings_el">
+                Мелодия:
+                    <select class="select" name="" id="">
+                        <option selected value="">Вариант 1</option>
+                        <option value="">Вариант 2</option>
+                        <option value="">Вариант 3</option>
+                        <option value="">Вариант 4</option>                 
+                    </select>
+            </label>
         </div>
     </main>
     <footer class="footer">
@@ -32,6 +44,6 @@
             <span>By Magomedov Sultan</span>
         </div>
     </footer>
-    <script src="js/pomodoro_set_time.js"></script>
+    <script src="js/set_time.js"></script>
 </body>
 </html>

@@ -50,7 +50,7 @@ body::-webkit-scrollbar {
 
 
 .header_buttons {
-    width: 15%;
+    width: 12%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,7 +68,7 @@ body::-webkit-scrollbar {
 }
 
 .header_buttons img:hover {
-    width: 5rem;
+    width: 6rem;
     transition: 0.5s;
     margin: -1rem;
 }
@@ -147,6 +147,48 @@ body::-webkit-scrollbar {
     width: 50px;
 }
 
+.main_settings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    margin-bottom: 100px;
+}
+
+.settings_el {
+    margin-right: auto;
+    font-family: 'second-font';
+    font-weight: bold;
+    font-size: var(--text-size-second);
+    color: var(--text-color-light);
+}
+
+.settings_el input[type='radio'] {
+    transform: scale(1.5);
+    margin: 10px;
+}
+
+.settings_el select {
+    font-family: 'second-font';
+    font-size: var(--text-size-second);
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    color: var(--text-color-light);
+}
+
+.settings_el select option {
+    background-color: #172c4b;
+}
+
+.settings-title {
+    color: var(--text-color-light);
+    font-family: 'main-font';
+    font-size: var(--text-size-main);
+}
+
 .start {
     background-color: #4aca2d;
     box-shadow: 0 0 5px 2px #4aca2d;
@@ -190,6 +232,7 @@ body::-webkit-scrollbar {
     text-decoration: none;
     font-size: 1.5rem;
 }
+
 
 
 @keyframes lighthing {

@@ -20,8 +20,8 @@ function setTimerValues() {
         window.alert("некоректные секунды")
     } else {
         const timerValues = [
-                inputHours.value,
-                inputMinutes.value,
+                inputHours.value || 0,
+                inputMinutes.value || 0,
                 inputSeconds.value
             ]
         console.log(timerValues)
