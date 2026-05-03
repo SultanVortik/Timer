@@ -64,7 +64,7 @@
 }
 
 .main_input::placeholder {
-    color: white;
+    color: var(--text-color-light);
 }
 
 .main_input::-webkit-outer-spin-button,

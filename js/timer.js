@@ -1,12 +1,13 @@
 const timerValues = JSON.parse(localStorage.getItem("timerValues")) || [0, 0, 0];
 const resetValues = JSON.parse(localStorage.getItem("resetValues")) || [0, 0, 0];
+const localStorageSettings = JSON.parse(localStorage.getItem('settingsObj'))
 const currentTime = document.querySelector("#current-time");
 const timerBlock = document.querySelector(".main_timer");
 const btnStart = document.querySelector(".start");
 const btnPause = document.querySelector(".pause");
 const btnReset = document.querySelector(".reset");
 currentTime.innerHTML = `${timerValues[0]}:${timerValues[1]}:${timerValues[2]}`
-const music = new Audio('../src/music/1.mp3');
+const music = new Audio(`${localStorageSettings.music}`);
 const checking = () => {
     if (timerValues[0] === 0 && timerValues[1] === 0 && timerValues[2] === 0 ) {
         music.play()
@@ -98,8 +99,20 @@ function resetTimer() {
     playTimer()
 }
 
+function themeUse() {
+    const localStorageSettings = JSON.parse(localStorage.getItem('settingsObj'))
+    if (localStorageSettings.theme === 'light') {
+        const body = document.querySelector('body')
+        body.style.backgroundColor = '#FFF8DC'
+        body.style.setProperty('--text-color-light', 'black')
+    } else {
+        const body = document.querySelector('body')
+        body.style.backgroundColor = '#172c4b'
+        body.style.setProperty('--text-color-light', 'white')
+    }
+}
 
-
+themeUse()
 btnStart.addEventListener("click", playTimer)
 btnPause.addEventListener("click", stopTimer)
 btnReset.addEventListener("click", resetTimer)

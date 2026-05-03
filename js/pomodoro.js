@@ -2,6 +2,7 @@ const pomodoroValuesWork = JSON.parse(localStorage.getItem("pomodoroValuesWork")
 const pomodoroValuesBreak = JSON.parse(localStorage.getItem("pomodoroValuesBreak"))
 const resetPomodoroValuesBreak = JSON.parse(localStorage.getItem("resetPomodoroValuesBreak"))
 const resetPomodoroValuesWork = JSON.parse(localStorage.getItem("resetPomodoroValuesWork"))
+const localStorageSettings = JSON.parse(localStorage.getItem('settingsObj'))
 const pomodoroTime = document.querySelector("#pomodoro-time")
 const timerTitle = document.querySelector('.timer-title')
 const timerBlock = document.querySelector(".main_timer");
@@ -10,7 +11,7 @@ const btnPause = document.querySelector(".pause");
 const btnReset = document.querySelector(".reset");
 timerBlock.classList.add('timer-start')
 pomodoroTime.innerHTML = `${pomodoroValuesWork[0]}:${pomodoroValuesWork[1]}`
-const music = new Audio('../src/music/4.mp3');
+const music = new Audio(`${localStorageSettings.music}`);
 
 let pomodoroInt 
 let isFinished = false;
@@ -112,6 +113,20 @@ function resetTimer() {
         window.location.reload()
     }
 
+function themeUse() {
+    const localStorageSettings = JSON.parse(localStorage.getItem('settingsObj'))
+    if (localStorageSettings.theme === 'light') {
+        const body = document.querySelector('body')
+        body.style.backgroundColor = '#FFF8DC'
+        body.style.setProperty('--text-color-light', 'black')
+    } else {
+        const body = document.querySelector('body')
+        body.style.backgroundColor = '#172c4b'
+        body.style.setProperty('--text-color-light', 'white')
+    }
+}
+
+themeUse()
 btnStart.addEventListener('click', startTimer)
 btnPause.addEventListener('click', stopTimer)
 btnReset.addEventListener('click', resetTimer)

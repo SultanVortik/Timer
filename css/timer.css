@@ -24,7 +24,6 @@ body::-webkit-scrollbar {
 }
 
 .header {
-    background-color: #172c4b;
     color: var(--text-color-light);
     font-size: var(--text-size-main);
     font-family: "main-font";

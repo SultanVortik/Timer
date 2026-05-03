@@ -22,18 +22,18 @@
     <main class="main">
         <h1 class="settings-title">Settings</h1>
         <div class="main_settings">
-            <label for="" class="settings_el">
-                Тема: 
-                Светлая<input type="radio" name="theme" id="light"> 
-                Тёмная<input type="radio" name="theme" id="dark">
+            <label for="" class="settings_el" id="theme-container">
+                Theme: 
+                Light<input type="radio" name="theme" id="light"> 
+                Dark<input type="radio" name="theme" id="dark">
             </label><br>
             <label for="" class="settings_el">
-                Мелодия:
+                Melody:
                     <select class="select" name="" id="">
-                        <option selected value="">Вариант 1</option>
-                        <option value="">Вариант 2</option>
-                        <option value="">Вариант 3</option>
-                        <option value="">Вариант 4</option>                 
+                        <option selected value="../src/music/1.mp3">Option 1</option>
+                        <option value="../src/music/2.mp3">Option 2</option>
+                        <option value="../src/music/3.mp3">Option 3</option>
+                        <option value="../src/music/4.mp3">Option 4</option>                 
                     </select>
             </label>
         </div>
@@ -44,6 +44,6 @@
             <span>By Magomedov Sultan</span>
         </div>
     </footer>
-    <script src="js/set_time.js"></script>
+    <script type="module" src="js/settings.js"></script>
 </body>
 </html>

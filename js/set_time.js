@@ -38,8 +38,25 @@ function resetInputValue() {
     inputSeconds.value = ""
 }
 
+function themeUse() {
+    const localStorageSettings = JSON.parse(localStorage.getItem('settingsObj'))
+    if (localStorageSettings.theme === 'light') {
+        const body = document.querySelector('body')
+        body.style.backgroundColor = '#FFF8DC'
+        body.style.setProperty('--text-color-light', 'black')
+        musicOption.forEach((item) => {
+            item.style.backgroundColor = '#FFF8DC'
+        })
+    } else {
+        const body = document.querySelector('body')
+        body.style.backgroundColor = '#172c4b'
+        body.style.setProperty('--text-color-light', 'white')
+    }
+}
+
 
 //Button Event
 
 setTimerBtn.addEventListener('click', setTimerValues)
 cancelBtn.addEventListener('click', resetInputValue)
+themeUse()

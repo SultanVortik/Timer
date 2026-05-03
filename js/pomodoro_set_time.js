@@ -1,3 +1,4 @@
+const pomodoroTitle = document.querySelector('.main_title')
 const buttonOne = document.querySelector(".btn-1")
 const buttonTwo = document.querySelector(".btn-2")
 const workArrayOne = [29, 59]
@@ -20,3 +21,21 @@ buttonTwo.addEventListener("click", () => {
     localStorage.setItem("resetPomodoroValuesBreak", `[${breakArrayTwo}]`)
     location.href = "pomodoro.html"
 })
+
+function themeUse() {
+    const localStorageSettings = JSON.parse(localStorage.getItem('settingsObj'))
+    if (localStorageSettings.theme === 'light') {
+        const body = document.querySelector('body')
+        body.style.backgroundColor = '#FFF8DC'
+        body.style.setProperty('--text-color-light', 'black')
+        pomodoroTitle.style.color = 'black' 
+        console.log(localStorageSettings.theme)
+    } else {
+        const body = document.querySelector('body')
+        body.style.backgroundColor = '#172c4b'
+        body.style.setProperty('--text-color-light', 'white')
+        console.log(localStorageSettings.theme)
+    }
+}
+
+themeUse()
