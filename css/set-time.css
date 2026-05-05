@@ -94,3 +94,129 @@
     background-clip: text;
     color: transparent; 
 }
+
+
+@media (max-width: 1700px) {
+    .main_input {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 1500px ) {
+    .header_buttons {
+        width: 12rem;
+    }
+    .main_pomodoro-button {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 1200px ) {
+    .main_button {
+        width: 25%;
+        font-size: 2rem;
+    }
+    .main_input-time-container {
+        width: 60%;
+        height: 200px;
+    }
+    .main_input {
+        height: 50%;
+        font-size: 1.5rem;
+    }
+    .main_pomodoro-button {
+        font-size: 3rem;
+        width: 40%;
+    }
+    .main_title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 900px ) {
+    .main_button {
+        font-size: 1.5rem;
+    }
+    .main_input-time-container {
+        height: 200px;
+    }
+    .footer_info, .footer_info a {
+        font-size: 1rem;
+    }
+    .main_title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 700px ) {
+    .main_button {
+        font-size: 1rem;
+    }
+    .main_input-time-container {
+        height: 100px;
+    }
+    .main_input {
+        font-size: 1rem;
+    }
+    .main_set-time-buttons {
+        margin-top: -20px;
+    }
+    .header_title {
+        font-size: 2rem;
+    }
+    .header_buttons {
+        width: 10rem;
+        margin-left: -2rem;
+    }
+    .main_pomodoro-button {
+        font-size: 2rem;
+        width: 40%;
+    }
+}
+
+@media (max-width: 500px ) {
+    .main_button {
+        font-size: 0.7rem;
+    }
+    .footer_info, .footer_info a {
+        font-size: 0.7rem;
+    }
+    .main_title {
+        font-size: 1.5rem;
+    }
+    .main_pomodoro-button {
+        font-size: 1.5rem;
+        width: 40%;
+    }
+}
+
+@media (max-width: 400px ) {
+    .main_input {
+        font-size: 0.7rem;
+    }
+    .main_set-time-buttons {
+        margin-top: -40px;
+    }
+    .main_button {
+        font-size: 0.5rem;
+    }
+    .main_pomodoro-button {
+        font-size: 1rem;
+        width: 40%;
+    }
+    .main_title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 300px ) {
+    .main_input {
+        font-size: 0.5rem;
+    }
+    .header_buttons {
+        width: 9rem;
+    }
+    .header_title {
+        font-size: 1.5rem;
+    }
+}

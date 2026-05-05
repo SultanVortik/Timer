@@ -208,6 +208,10 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer_info a {
@@ -248,3 +252,137 @@ body::-webkit-scrollbar {
     }
 }
 
+@media (max-width: 1600px) {
+    .main_button {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1500px ) {
+    .header_buttons {
+        width: 12rem;
+    }
+}
+
+
+@media (max-width: 1400px) {
+    .main_button {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main_button {
+        font-size: 1.5rem;
+    }
+    .main_button-icon {
+        width: 30%;
+    }
+    .main_timer {
+        width: 500px;
+        height: 500px;
+    }
+    .pomodoro_timer_el {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 900px ) {
+    .footer_info, .footer_info a {
+        font-size: 1rem;
+    }
+    .settings-title {
+        font-size: 2rem;
+    }
+    .settings_el {
+        font-size: 1rem;
+    }
+    .settings_el select {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .main_button {
+        font-size: 1rem;
+    }
+    .header_title {
+        font-size: 2rem;
+    }
+    .header_buttons {
+        width: 10rem;
+        margin-left: -2rem;
+    }
+    .main_timer {
+        width: 300px;
+        height: 300px;
+        font-size: 4rem;
+    }
+    .main_timer-buttons {
+        width: 50%;
+    }
+    .pomodoro_timer_el {
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 500px) {
+    .footer_info, .footer_info a {
+        font-size: 0.7rem;
+    }
+    .main_timer {
+        width: 200px;
+        height: 200px;
+        font-size: 3rem;
+    }
+    .main_timer-buttons {
+        width: 60%;
+    }
+    .main_settings {
+        margin-bottom: 0;
+    }
+    .settings-title {
+        font-size: 1rem;
+    }
+    .settings_el {
+        font-size: 0.5rem;
+    }
+    .settings_el select {
+        font-size: 0.5rem;
+    }
+}
+
+@media(max-width: 400px) {
+    .main_timer {
+        width: 150px;
+        height: 150px;
+        font-size: 2rem;
+    }
+    .main_button-icon {
+        width: 40%;
+    }
+    .pomodoro_timer_el {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 330px ) {
+    .main_input {
+        font-size: 0.5rem;
+    }
+    .header_buttons {
+        width: 9rem;
+    }
+    .header_title {
+        font-size: 1.5rem;
+    }
+    .header_buttons {
+        margin-left: -10%;
+    }
+    .main_button {
+        font-size: 0.7rem;
+    }
+    .main_timer-buttons {
+        width: 70%;
+    }
+}
